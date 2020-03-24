@@ -32,14 +32,13 @@ class Pokemon
           SELECT *
           FROM pokemon
           WHERE id = ?
-          LIMIT 1
         SQL
 
         pokemon = db.execute(sql, id)
-        new_pokemon.id = pokemon[0][0]
-        new_pokemon.name = pokemon[0][1]
-        new_pokemon.type = pokemon[0][2]
-        new_pokemon = Pokemon.new(id: new_id, name: name, type: type, db: db)
+        new_pokemon_id = pokemon[0][0]
+        new_pokemon_name = pokemon[0][1]
+        new_pokemon_type = pokemon[0][2]
+        new_pokemon = self.new(id: new_pokemon_id, name: new_pokemon_name, type: new_pokemon_type, db: db)
         return new_pokemon
     end
 
