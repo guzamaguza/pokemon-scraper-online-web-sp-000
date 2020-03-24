@@ -8,10 +8,10 @@ class Pokemon
 
   def initialize(id:, name:, type:, db:)
     #above uses keywords
-    #@db = db
-    #@id = id
-    #@name = name
-    #@type = type
+    @db = db
+    @id = id
+    @name = name
+    @type = type
     @@all << self
   end
 
